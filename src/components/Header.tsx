@@ -42,7 +42,7 @@ const Header = () => {
             <img
               src={girautoLogo}
               alt="Girauto"
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-20 md:h-20 w-auto object-contain"
             />
           </button>
 

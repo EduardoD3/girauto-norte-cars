@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         {/* Brand */}
         <div>
-          <img src={girautoLogo} alt="Girauto" className="h-10 w-auto mb-4" />
+          <img src={girautoLogo} alt="Girauto" className="h-20 w-auto mb-4" />
           <p className="text-white/50 font-body text-sm leading-relaxed">
             O maior portal de veículos do Norte do Brasil. Conectando compradores e vendedores há mais de 12 anos.
           </p>
@@ -41,7 +41,7 @@ const Footer = () => (
             </li>
             <li className="flex items-start gap-2 text-white/50">
               <MapPin size={14} className="text-brand-red mt-0.5" />
-              Belém, PA — Região Norte
+              Rondonia, RO — Região Norte
             </li>
           </ul>
         </div>

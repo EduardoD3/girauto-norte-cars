@@ -21,7 +21,30 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 bg-brand-black/40" />
+      {/* TV Channel Badge */}
+      <div className="absolute top-6 right-6 z-20 animate-fade-in">
+        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2 shadow-lg">
 
+          {/* Live indicator */}
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+            <span className="text-xs text-white/70 font-semibold">AO VIVO</span>
+          </div>
+
+          {/* Divider */}
+          <div className="w-px h-4 bg-white/20" />
+
+          {/* Channel info */}
+          <div className="flex flex-col leading-tight">
+            <span className="text-white font-bold text-sm tracking-wide">
+              RTN TV
+            </span>
+            <span className="text-white/60 text-xs">
+              Canal 21.1
+            </span>
+          </div>
+        </div>
+      </div>
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
