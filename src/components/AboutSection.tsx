@@ -32,7 +32,7 @@ const AboutSection = () => (
           </p>
 
           <p className="text-lg font-body text-muted-foreground leading-relaxed mb-6">
-            Há mais de <strong className="text-foreground">12 anos</strong>, conectamos compradores e vendedores com credibilidade, visibilidade e resultados reais, unindo televisão e digital em uma única plataforma.
+           conectamos compradores e vendedores com credibilidade, visibilidade e resultados reais, unindo televisão e digital em uma única plataforma.
           </p>
 
           <p className="text-lg font-body text-muted-foreground leading-relaxed">

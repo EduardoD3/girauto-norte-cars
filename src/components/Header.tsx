@@ -60,14 +60,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button
-              onClick={() => scrollTo("#anuncie")}
-              className="bg-brand-red hover:bg-brand-red-light text-primary-foreground font-semibold px-6 py-2.5 rounded-xl shadow-red transition-all duration-200 hover:scale-105 active:scale-95"
-            >
-              Anunciar Veículo
-            </Button>
-          </div>
+          
 
           {/* Mobile hamburger */}
           <button

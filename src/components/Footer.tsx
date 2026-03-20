@@ -9,7 +9,7 @@ const Footer = () => (
         <div>
           <img src={girautoLogo} alt="Girauto" className="h-20 w-auto mb-4" />
           <p className="text-white/50 font-body text-sm leading-relaxed">
-            O maior portal de veículos do Norte do Brasil. Conectando compradores e vendedores há mais de 12 anos.
+            O maior portal de veículos do Norte do Brasil. Conectando compradores e vendedores com excelencia.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ const Footer = () => (
           <ul className="space-y-3 font-body text-sm">
             <li className="flex items-center gap-2 text-white/50">
               <Phone size={14} className="text-brand-red" />
-              (91) 3333-4444
+              (00) 0000-0000
             </li>
             <li className="flex items-center gap-2 text-white/50">
               <Mail size={14} className="text-brand-red" />
@@ -51,9 +51,9 @@ const Footer = () => (
           <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4">Redes Sociais</h4>
           <div className="flex gap-3">
             {[
-              { icon: Instagram, href: "#" },
+              { icon: Instagram, href: "https://www.instagram.com/girauto1" },
               { icon: Facebook, href: "#" },
-              { icon: Youtube, href: "#" },
+              { icon: Youtube, href: "https://www.youtube.com/@girauto" },
             ].map((social, i) => (
               <a
                 key={i}
