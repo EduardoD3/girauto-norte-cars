@@ -87,7 +87,7 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
           </div>
 
           {/* Stats */}
-          <div
+          {/* <div
             className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.45s" }}
           >
@@ -104,7 +104,7 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
                 <div className="text-white/60 text-xs font-body mt-0.5">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

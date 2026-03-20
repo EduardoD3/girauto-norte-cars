@@ -17,8 +17,28 @@ const AdvertiseSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const phoneNumber = "69981126381"; // coloque seu número com DDI + DDD (sem + ou espaços)
+
+    const text = `Olá! Gostaria de anunciar um veículo.
+
+📌 Nome: ${form.name}
+📞 Telefone: ${form.phone}
+🚗 Veículo: ${form.vehicle}
+📝 Mensagem: ${form.message || "Não informada"}
+`;
+
+    const encodedText = encodeURIComponent(text);
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    window.open(url, "_blank");
+
     setSubmitted(true);
-    toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
+    toast({
+      title: "Redirecionando para o WhatsApp!",
+      description: "Finalize o envio por lá.",
+    });
   };
 
   return (
