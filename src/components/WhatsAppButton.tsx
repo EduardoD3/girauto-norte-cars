@@ -1,6 +1,6 @@
 const WhatsAppButton = () => (
   <a
-    href="https://wa.me/5569981126381?text=Olá! Gostaria de mais informações sobre os veículos no Girauto."
+    href="https://wa.me/5569984026960?text=Olá! Gostaria de mais informações sobre os veículos no Girauto."
     target="_blank"
     rel="noopener noreferrer"
     className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-200 animate-pulse-red"

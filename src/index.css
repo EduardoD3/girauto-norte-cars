@@ -85,7 +85,14 @@
     font-weight: 700;
   }
 }
-
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @layer utilities {
   .font-display {
     font-family: 'Montserrat', sans-serif;

@@ -9,7 +9,11 @@ interface VehicleCardProps {
 }
 
 const formatPrice = (price: number) =>
-  new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 }).format(price);
+  new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 0,
+  }).format(price);
 
 const formatMileage = (km: number) =>
   new Intl.NumberFormat("pt-BR").format(km) + " km";
@@ -28,15 +32,27 @@ const VehicleCard = ({ vehicle, onClick }: VehicleCardProps) => {
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
         <Badge className="absolute top-3 left-3 bg-brand-red text-primary-foreground font-semibold text-xs px-2.5 py-1 rounded-lg">
           {vehicle.type === "carro" ? "🚗 Carro" : "🏍️ Moto"}
         </Badge>
+
         {vehicle.year >= 2022 && (
           <Badge className="absolute top-3 right-3 bg-brand-black/80 backdrop-blur-sm text-white text-xs px-2.5 py-1 rounded-lg border border-white/20">
             Destaque
           </Badge>
         )}
+
+        {/* Carimbo de imagem ilustrativa */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="rotate-[-18deg] rounded-lg border-2 border-white/70 bg-black/35 px-4 py-2 backdrop-blur-[2px] shadow-lg">
+            <span className="text-white/90 text-xs sm:text-sm font-extrabold tracking-[0.22em] uppercase">
+              Imagem Ilustrativa
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Content */}
@@ -84,7 +100,10 @@ const VehicleCard = ({ vehicle, onClick }: VehicleCardProps) => {
           <Button
             size="sm"
             className="bg-brand-red hover:bg-brand-red-light text-primary-foreground font-semibold rounded-xl px-4 py-2.5 h-auto text-sm transition-all duration-200 hover:scale-105 active:scale-95"
-            onClick={(e) => { e.stopPropagation(); onClick(vehicle); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick(vehicle);
+            }}
           >
             Ver Detalhes
           </Button>

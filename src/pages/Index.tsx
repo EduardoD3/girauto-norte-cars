@@ -7,6 +7,7 @@ import AdvertiseSection from "@/components/AdvertiseSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import UnderConstructionBanner from "@/components/UnderConstructionBanner";
 import type { Vehicle } from "@/data/vehicles";
 
 const Index = () => {
@@ -19,6 +20,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <UnderConstructionBanner />
+
       <Header />
       <HeroSection
         onSearch={() => scrollTo("#veiculos")}
@@ -29,6 +32,7 @@ const Index = () => {
       <AboutSection />
       <Footer />
       <WhatsAppButton />
+
       {selectedVehicle && (
         <VehicleDetail
           vehicle={selectedVehicle}

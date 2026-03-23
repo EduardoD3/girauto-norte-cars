@@ -1,4 +1,4 @@
-import { ArrowRight, Radio, Search } from "lucide-react";
+import { ArrowRight, Radio, Search, Car, Bike, BadgeDollarSign, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroCars from "@/assets/hero-cars.jpg";
 
@@ -6,6 +6,29 @@ interface HeroSectionProps {
   onSearch: () => void;
   onAdvertise: () => void;
 }
+
+const advertiseCards = [
+  {
+    icon: Car,
+    title: "Anuncie seu carro",
+    text: "Publique seu veículo e alcance compradores da região.",
+  },
+  {
+    icon: Bike,
+    title: "Venda sua moto",
+    text: "Destaque sua moto com mais visibilidade no portal.",
+  },
+  {
+    icon: BadgeDollarSign,
+    title: "Mais chances de vender",
+    text: "Seu anúncio em evidência para gerar mais interesse.",
+  },
+  {
+    icon: Megaphone,
+    title: "Divulgue com facilidade",
+    text: "Anuncie de forma simples, rápida e profissional.",
+  },
+];
 
 const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
   return (
@@ -18,37 +41,33 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroCars})` }}
       />
+
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 bg-brand-black/40" />
-      {/* TV Channel Badge */}
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/40 text-brand-red px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm animate-fade-in">
+            {/* Live indicator */}
+            <div className="flex items-center gap-2">
+              <Radio size={14} />
+            </div>
 
-          {/* Live indicator */}
-          <div className="flex items-center gap-2">
-                          <Radio size={14} />
+            {/* Divider */}
+            <div className="w-px h-4 bg-white/20" />
 
-          </div>
-
-          {/* Divider */}
-          <div className="w-px h-4 bg-white/20" />
-
-          {/* Channel info */}
-          <div className="flex flex-col leading-tight">
-            <span className="text-white font-bold text-sm tracking-wide">
-              Girauto TV
-            </span>
-            <span className="text-white/60 text-xs">
-
-              Acompanhe nosso programa todos os dias no Canal 21.1
-            </span>
-          </div>
-           
+            {/* Channel info */}
+            <div className="flex flex-col leading-tight text-left">
+              <span className="text-white font-bold text-sm tracking-wide">
+                Girauto TV
+              </span>
+              <span className="text-white/60 text-xs">
+                Acompanhe nosso programa todos os dias no Canal 21.1
+              </span>
+            </div>
           </div>
 
           {/* Headline */}
@@ -58,7 +77,10 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
             em um só lugar
           </h1>
 
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-body animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+          <p
+            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-body animate-fade-in-up"
+            style={{ animationDelay: "0.15s" }}
+          >
             Conectamos compradores e vendedores com as melhores ofertas de carros e motos de todo o Norte do Brasil.
           </p>
 
@@ -75,6 +97,7 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
               <Search size={20} className="mr-2" />
               Ver Ofertas
             </Button>
+
             <Button
               onClick={onAdvertise}
               size="lg"
@@ -86,25 +109,53 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
             </Button>
           </div>
 
-          {/* Stats */}
-          {/* <div
-            className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto animate-fade-in-up"
+          {/* Mini carousel CTA */}
+          <div
+            className="mt-10 overflow-hidden animate-fade-in-up"
             style={{ animationDelay: "0.45s" }}
           >
-            {[
-              { value: "500+", label: "Veículos" },
-              { value: "12 anos", label: "No ar" },
-              { value: "Norte BR", label: "Cobertura" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl py-3 px-2"
-              >
-                <div className="font-display text-xl md:text-2xl font-black text-white">{stat.value}</div>
-                <div className="text-white/60 text-xs font-body mt-0.5">{stat.label}</div>
+            <div className="relative">
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-black/40 to-transparent" />
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-black/40 to-transparent" />
+
+              <div className="flex gap-4 w-max animate-[marquee_24s_linear_infinite] hover:[animation-play-state:paused]">
+                {[...advertiseCards, ...advertiseCards].map((item, index) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <button
+                      key={`${item.title}-${index}`}
+                      onClick={onAdvertise}
+                      className="group min-w-[240px] max-w-[240px] rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md px-4 py-4 text-left shadow-lg transition-all duration-300 hover:bg-white/15 hover:border-brand-red/50 hover:-translate-y-1"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-red/20 text-brand-red border border-brand-red/30 shrink-0">
+                          <Icon size={18} />
+                        </div>
+
+                        <div className="min-w-0">
+                          <h3 className="text-sm font-bold text-white leading-tight mb-1">
+                            {item.title}
+                          </h3>
+                          <p className="text-xs text-white/65 leading-relaxed">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-3 flex items-center gap-2 text-brand-red text-xs font-semibold">
+                        Anunciar veículo
+                        <ArrowRight
+                          size={14}
+                          className="transition-transform duration-200 group-hover:translate-x-1"
+                        />
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
-            ))}
-          </div> */}
+            </div>
+          </div>
         </div>
       </div>
 
