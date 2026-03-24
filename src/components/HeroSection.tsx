@@ -50,30 +50,13 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/40 text-brand-red px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm animate-fade-in">
-            {/* Live indicator */}
-            <div className="flex items-center gap-2">
-              <Radio size={14} />
-            </div>
-
-            {/* Divider */}
-            <div className="w-px h-4 bg-white/20" />
-
-            {/* Channel info */}
-            <div className="flex flex-col leading-tight text-left">
-              <span className="text-white font-bold text-sm tracking-wide">
-                Girauto TV
-              </span>
-              <span className="text-white/60 text-xs">
-                Acompanhe nosso programa todos os dias no Canal 21.1
-              </span>
-            </div>
+          <div className="inline-flex items-center gap-2  px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm animate-fade-in">
+  
           </div>
 
           {/* Headline */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up">
-            Os melhores veículos{" "}
-            <span className="text-brand-red">da região</span>{" "}
+            Anuncie em todas as plataformas{" "}
             em um só lugar
           </h1>
 
