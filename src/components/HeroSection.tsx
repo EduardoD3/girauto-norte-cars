@@ -40,10 +40,17 @@ const advertiseCards = [
 
 const youtubeVideos = [
   {
-    id: "8HRJTORF2cA",
-    title: "Conhecendo a Tesla e o Cybertruck",
+    id: "ZVBqX-paujM",
+    title: "Veja esse Cyber Truck plotado, aqui nos EUA",
   },
-
+ {
+    id: "saHl7jt3CB0",
+    title: "Como não errar na escolha do seu carro?",
+  },
+   {
+    id: "pDxIlLWZU_s",
+    title: "Peculiaridades no trânsito de Orlando",
+  },
 ];
 
 const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
@@ -220,7 +227,7 @@ const HeroSection = ({ onSearch, onAdvertise }: HeroSectionProps) => {
 
           <div className="mt-12 flex justify-center">
             <a
-              href="https://youtu.be/8HRJTORF2cA"
+              href="https://www.youtube.com/@girautooficial"
               target="_blank"
               rel="noopener noreferrer"
             >
