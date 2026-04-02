@@ -18,7 +18,7 @@ const AdvertiseSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const phoneNumber = "69981126381"; // coloque seu número com DDI + DDD (sem + ou espaços)
+    const phoneNumber = "69992370987"; // coloque seu número com DDI + DDD (sem + ou espaços)
 
     const text = `Olá! Gostaria de anunciar um veículo.
 
