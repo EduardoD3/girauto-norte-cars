@@ -44,12 +44,12 @@ const youtubeVideos = [
     title: "Veja esse Cyber Truck plotado, aqui nos EUA",
   },
  {
-    id: "saHl7jt3CB0",
-    title: "Como não errar na escolha do seu carro?",
+    id: "lZ92ESFoUrA",
+    title: "MCLAREN nas ruas de Orlando!",
   },
    {
-    id: "pDxIlLWZU_s",
-    title: "Peculiaridades no trânsito de Orlando",
+    id: "DpJ3kXEDs7o",
+    title: "Carro nas ruas dos EUA!",
   },
 ];
 
