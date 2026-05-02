@@ -109,7 +109,7 @@ const GiraudoAssistant = () => {
     <>
       {/* Floating Mascot Button */}
       {!open && (
-        <div className="fixed bottom-24 right-6 z-40 flex flex-col items-end gap-2">
+        <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
           {showBubble && (
             <div className="relative max-w-[220px] rounded-2xl rounded-br-sm bg-white px-4 py-3 shadow-xl animate-fade-in border border-brand-red/20">
               <button

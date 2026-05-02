@@ -6,7 +6,6 @@ import VehicleDetail from "@/components/VehicleDetail";
 import AdvertiseSection from "@/components/AdvertiseSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import GiraudoAssistant from "@/components/GiraudoAssistant";
 import UnderConstructionBanner from "@/components/UnderConstructionBanner";
 import type { Vehicle } from "@/data/vehicles";
@@ -32,7 +31,6 @@ const Index = () => {
       <AdvertiseSection />
       <AboutSection />
       <Footer />
-      <WhatsAppButton />
       <GiraudoAssistant />
 
       {selectedVehicle && (
