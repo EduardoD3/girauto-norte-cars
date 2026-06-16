@@ -6,7 +6,9 @@ import girautoLogo from "@/assets/girauto-logo.png";
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Veículos", href: "#veiculos" },
-  { label: "Anuncie Conosco", href: "#anuncie" },
+  { label: "Girauto TV", href: "#girauto-tv" },
+  { label: "Loja", href: "#loja" },
+  { label: "Anuncie", href: "#anuncie" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];

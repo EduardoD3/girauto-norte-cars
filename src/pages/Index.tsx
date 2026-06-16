@@ -8,6 +8,9 @@ import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 import GiraudoAssistant from "@/components/GiraudoAssistant";
 import UnderConstructionBanner from "@/components/UnderConstructionBanner";
+import GirautoTV from "@/components/GirautoTV";
+import GirautoShop from "@/components/shop/GirautoShop";
+import { ShopProvider } from "@/components/shop/ShopContext";
 import type { Vehicle } from "@/data/vehicles";
 
 const Index = () => {
@@ -19,27 +22,31 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <UnderConstructionBanner />
+    <ShopProvider>
+      <div className="min-h-screen bg-background">
+        <UnderConstructionBanner />
 
-      <Header />
-      <HeroSection
-        onSearch={() => scrollTo("#veiculos")}
-        onAdvertise={() => scrollTo("#anuncie")}
-      />
-      <VehicleGrid onSelectVehicle={setSelectedVehicle} />
-      <AdvertiseSection />
-      <AboutSection />
-      <Footer />
-      <GiraudoAssistant />
-
-      {selectedVehicle && (
-        <VehicleDetail
-          vehicle={selectedVehicle}
-          onClose={() => setSelectedVehicle(null)}
+        <Header />
+        <HeroSection
+          onSearch={() => scrollTo("#veiculos")}
+          onAdvertise={() => scrollTo("#anuncie")}
         />
-      )}
-    </div>
+        <VehicleGrid onSelectVehicle={setSelectedVehicle} />
+        <GirautoTV />
+        <GirautoShop />
+        <AdvertiseSection />
+        <AboutSection />
+        <Footer />
+        <GiraudoAssistant />
+
+        {selectedVehicle && (
+          <VehicleDetail
+            vehicle={selectedVehicle}
+            onClose={() => setSelectedVehicle(null)}
+          />
+        )}
+      </div>
+    </ShopProvider>
   );
 };
 

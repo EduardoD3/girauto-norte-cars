@@ -17,10 +17,17 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-sm uppercase tracking-wider mb-4">Navegação</h4>
           <ul className="space-y-2 font-body text-sm">
-            {["Início", "Veículos", "Anuncie Conosco", "Sobre"].map((link) => (
-              <li key={link}>
-                <a href={`#${link.toLowerCase().replace(/ /g, '')}`} className="text-white/50 hover:text-brand-red transition-colors">
-                  {link}
+            {[
+              { label: "Início", href: "#inicio" },
+              { label: "Veículos", href: "#veiculos" },
+              { label: "Girauto TV", href: "#girauto-tv" },
+              { label: "Loja Girauto", href: "#loja" },
+              { label: "Anuncie Conosco", href: "#anuncie" },
+              { label: "Sobre", href: "#sobre" },
+            ].map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="text-white/50 hover:text-brand-red transition-colors">
+                  {link.label}
                 </a>
               </li>
             ))}
