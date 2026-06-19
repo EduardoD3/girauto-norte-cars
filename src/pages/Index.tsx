@@ -11,6 +11,8 @@ import UnderConstructionBanner from "@/components/UnderConstructionBanner";
 import GirautoTV from "@/components/GirautoTV";
 import GirautoShop from "@/components/shop/GirautoShop";
 import { ShopProvider } from "@/components/shop/ShopContext";
+import CartDrawer from "@/components/shop/CartDrawer";
+import VehicleProductsPreview from "@/components/shop/VehicleProductsPreview";
 import type { Vehicle } from "@/data/vehicles";
 
 const Index = () => {
@@ -31,6 +33,7 @@ const Index = () => {
           onSearch={() => scrollTo("#veiculos")}
           onAdvertise={() => scrollTo("#anuncie")}
         />
+        <VehicleProductsPreview />
         <VehicleGrid onSelectVehicle={setSelectedVehicle} />
         <GirautoTV />
         <GirautoShop />
@@ -38,6 +41,7 @@ const Index = () => {
         <AboutSection />
         <Footer />
         <GiraudoAssistant />
+        <CartDrawer />
 
         {selectedVehicle && (
           <VehicleDetail

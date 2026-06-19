@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import girautoLogo from "@/assets/girauto-logo.png";
+import { useShop } from "@/components/shop/ShopContext";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -16,6 +17,7 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { cartCount, openCart } = useShop();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -61,17 +63,30 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          
+          {/* Right actions */}
+          <div className="flex items-center gap-1">
+            <button
+              onClick={openCart}
+              className="relative p-2 text-white rounded-lg hover:bg-white/10 transition-colors"
+              aria-label={`Carrinho com ${cartCount} itens`}
+            >
+              <ShoppingCart size={22} />
+              {cartCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 bg-brand-red text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </button>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-white rounded-lg hover:bg-white/10 transition-colors"
+              aria-label="Menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
