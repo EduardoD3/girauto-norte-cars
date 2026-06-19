@@ -30,89 +30,6 @@ const GirautoTV = () => {
       <div className="absolute top-20 -left-20 w-96 h-96 bg-brand-red/15 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-brand-red/10 blur-3xl rounded-full pointer-events-none" />
 
-      {/* ============== YOUTUBE ============== */}
-      <div className="container mx-auto px-4 py-16 md:py-24 relative">
-        <div className="text-center mb-10">
-          <span className="inline-flex items-center gap-2 text-brand-red text-sm font-semibold uppercase tracking-widest font-body mb-3">
-            <span className="inline-block w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-            Girauto no YouTube
-          </span>
-          <h2 className="font-display font-black text-3xl md:text-5xl text-white">
-            Acompanhe nosso <span className="text-brand-red">canal oficial</span>
-          </h2>
-          <p className="mt-4 text-white/60 font-body max-w-2xl mx-auto">
-            Programas completos, testes, projetos e os destaques do programa de TV — tudo no canal
-            oficial Girauto no YouTube.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-6 items-stretch">
-          {/* Player */}
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black shadow-red/20 shadow-2xl">
-            <div className="aspect-video w-full">
-              <iframe
-                src={YOUTUBE_CHANNEL_EMBED}
-                title="Canal Girauto no YouTube"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Channel card */}
-          <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 flex flex-col justify-between backdrop-blur-sm">
-            <div>
-              <div className="w-14 h-14 rounded-2xl bg-[#FF0000] flex items-center justify-center mb-5 shadow-lg shadow-red-500/30">
-                <Youtube className="text-white" size={28} />
-              </div>
-              <h3 className="font-display font-black text-white text-2xl mb-2">
-                Canal Girauto
-              </h3>
-              <p className="text-white/60 font-body text-sm leading-relaxed mb-6">
-                Inscreva-se para receber as melhores reportagens, testes e cobertura completa do
-                universo automotivo da região Norte.
-              </p>
-
-              <ul className="space-y-2.5 mb-8">
-                {[
-                  "Programas semanais completos",
-                  "Testes de carros e motos",
-                  "Bastidores e cobertura de eventos",
-                  "Conteúdo exclusivo do programa de TV",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2.5 text-white/75 font-body text-sm"
-                  >
-                    <Play size={14} className="text-brand-red mt-1 flex-shrink-0" fill="currentColor" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <Button
-              asChild
-              size="lg"
-              className="w-full bg-[#FF0000] hover:bg-[#cc0000] text-white rounded-xl font-bold"
-            >
-              <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">
-                <Youtube size={20} className="mr-2" />
-                Acessar canal no YouTube
-                <ExternalLink size={16} className="ml-2 opacity-80" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* divider */}
-      <div className="container mx-auto px-4">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-      </div>
-
       {/* ============== TIKTOK ============== */}
       <div className="container mx-auto px-4 py-16 md:py-24 relative">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
@@ -213,6 +130,89 @@ const GirautoTV = () => {
               </div>
             </article>
           ))}
+        </div>
+      </div>
+
+      {/* divider */}
+      <div className="container mx-auto px-4">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+      </div>
+
+      {/* ============== YOUTUBE ============== */}
+      <div className="container mx-auto px-4 py-16 md:py-24 relative">
+        <div className="text-center mb-10">
+          <span className="inline-flex items-center gap-2 text-brand-red text-sm font-semibold uppercase tracking-widest font-body mb-3">
+            <span className="inline-block w-2 h-2 rounded-full bg-brand-red animate-pulse" />
+            Girauto no YouTube
+          </span>
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white">
+            Acompanhe nosso <span className="text-brand-red">canal oficial</span>
+          </h2>
+          <p className="mt-4 text-white/60 font-body max-w-2xl mx-auto">
+            Programas completos, testes, projetos e os destaques do programa de TV — tudo no canal
+            oficial Girauto no YouTube.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-6 items-stretch">
+          {/* Player */}
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black shadow-red/20 shadow-2xl">
+            <div className="aspect-video w-full">
+              <iframe
+                src={YOUTUBE_CHANNEL_EMBED}
+                title="Canal Girauto no YouTube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Channel card */}
+          <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 flex flex-col justify-between backdrop-blur-sm">
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-[#FF0000] flex items-center justify-center mb-5 shadow-lg shadow-red-500/30">
+                <Youtube className="text-white" size={28} />
+              </div>
+              <h3 className="font-display font-black text-white text-2xl mb-2">
+                Canal Girauto
+              </h3>
+              <p className="text-white/60 font-body text-sm leading-relaxed mb-6">
+                Inscreva-se para receber as melhores reportagens, testes e cobertura completa do
+                universo automotivo da região Norte.
+              </p>
+
+              <ul className="space-y-2.5 mb-8">
+                {[
+                  "Programas semanais completos",
+                  "Testes de carros e motos",
+                  "Bastidores e cobertura de eventos",
+                  "Conteúdo exclusivo do programa de TV",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-white/75 font-body text-sm"
+                  >
+                    <Play size={14} className="text-brand-red mt-1 flex-shrink-0" fill="currentColor" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Button
+              asChild
+              size="lg"
+              className="w-full bg-[#FF0000] hover:bg-[#cc0000] text-white rounded-xl font-bold"
+            >
+              <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer">
+                <Youtube size={20} className="mr-2" />
+                Acessar canal no YouTube
+                <ExternalLink size={16} className="ml-2 opacity-80" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
